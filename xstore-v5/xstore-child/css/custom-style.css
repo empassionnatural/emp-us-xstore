@@ -190,6 +190,7 @@ button.btn-disabled,
   font-size: 15px;
   font-weight: bold;
 }
+
 .link-login:hover span {
   color: #8cc63f !important;
 }

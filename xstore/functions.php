@@ -18,6 +18,23 @@ function theme_enqueue_styles() {
 
 }
 
+add_action( 'wp_enqueue_scripts', 'plugin_scripts', 99 );
+function plugin_scripts() {
+
+	wp_enqueue_style( 'bootstrap-select-multi', get_stylesheet_directory_uri() . '/plugins/bootstrap-select/css/bootstrap-select.min.css' );
+	wp_enqueue_script( 'bootstrap-core', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', false, false, true );
+	wp_enqueue_script( 'bootstrap-select-multi', get_stylesheet_directory_uri() . '/plugins/bootstrap-select/js/bootstrap-select.min.js', array( 'jquery' ), '1.1.1', false );
+
+}
+//enqueue custom scripts
+add_action( 'wp_enqueue_scripts', 'empdev_custom_scripts_frontend', 99 );
+
+function empdev_custom_scripts_frontend(){
+
+	wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js/custom-script.js', array('jquery'), '1.2.5', false );
+
+}
+
 add_action('pmpro_after_checkout', 'sync_woo_billing_func');
 
 if(!function_exists('sync_woo_billing_func')){
@@ -48,66 +65,6 @@ if(!function_exists('sync_woo_billing_func')){
 	}
 }
 
-/*Check the billing address if its PO BOX*/
-/*
-add_filter('woocommerce_update_order_review_fragments', 'check_pobox_address_ajax');
-function check_pobox_address_ajax($array){
-	
-    $address  = ( isset( $_REQUEST['s_address'] ) ) ? $_REQUEST['s_address'] : $_REQUEST['address'];
-    $address2  = ( isset( $_REQUEST['s_address_2'] ) ) ? $_REQUEST['s_address_2'] : $_REQUEST['address_2'];
-    $postcode = ( isset( $_REQUEST['s_postcode'] ) ) ? $_REQUEST['s_postcode'] : $_REQUEST['postcode'];
-    $city = ( isset( $_REQUEST['s_city'] ) ) ? $_REQUEST['s_city'] : $_REQUEST['city'];
-    	
-    $replace  = array(" ", ".", ",", "-");
-    $address  = strtolower( str_replace( $replace, '', $address ) );
-    $address2  = strtolower( str_replace( $replace, '', $address2 ) );
-    $postcode = strtolower( str_replace( $replace, '', $postcode ) );
-    $city = strtolower( str_replace( $replace, '', $city ) );
-    $array['city'] = $city;
-    $array['postcode'] = $postcode;
-    $array['address2'] = $address2;
-    $array['address'] = $address;
-    $array['is_pobox'] = false;
-    if ( strstr( $address, 'pobox' ) || strstr( $address2, 'pobox' ) || strstr( $postcode, 'pobox' )  || strstr( $city, 'pobox' ) || strstr( $address, 'pob' ) || strstr( $address2, 'pob' ) || strstr( $postcode, 'pob' ) || strstr( $city, 'pob' ) ) {
-		$array['is_pobox'] = true;
-	}
-	return $array;
-
-}
-
-
-add_filter('woocommerce_after_checkout_validation', 'check_pobox_address');
-
-function check_pobox_address( $posted ) {
-  global $woocommerce;
-
-  $address  = ( isset( $posted['shipping_address_1'] ) ) ? $posted['shipping_address_1'] : $posted['billing_address_1'];
-  $address2  = ( isset( $posted['shipping_address_2'] ) ) ? $posted['shipping_address_2'] : $posted['billing_address_2'];
-  $postcode = ( isset( $posted['shipping_postcode'] ) ) ? $posted['shipping_postcode'] : $posted['billing_postcode'];
-  $city = ( isset( $posted['shipping_city'] ) ) ? $posted['shipping_city'] : $posted['billing_city'];
-  	
-  $replace  = array(" ", ".", ",", "-");
-  $address  = strtolower( str_replace( $replace, '', $address ) );
-  $address2  = strtolower( str_replace( $replace, '', $address2 ) );
-  $postcode = strtolower( str_replace( $replace, '', $postcode ) );
-  $city = strtolower( str_replace( $replace, '', $city ) );
-
-   if ( strstr( $address, 'pobox' ) || strstr( $address2, 'pobox' ) || strstr( $postcode, 'pobox' )  || strstr( $city, 'pobox' ) || strstr( $address, 'pob' ) || strstr( $address2, 'pob' ) || strstr( $postcode, 'pob' ) || strstr( $city, 'pob' ) ) {
-
-    
-    $chosen_methods = WC()->session->get( 'chosen_shipping_methods' );
-  	$chosen_shipping = $chosen_methods[0]; 
-  	$packages = WC()->shipping->get_packages();
-  	foreach ($packages as $i => $package) {
-	    $chosen_method = isset($chosen_shipping) ? $package['rates'][$chosen_shipping]->label : '';
-	}
-	if($chosen_method != 'PO Box'){
-		WC_add_notice( "<strong> YOU NEED TO SELECT PO BOX SHIPPING. </strong>",'error' );
-	}
-
-  }
-}
-*/
 function wc_ninja_remove_password_strength() {
   if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
     wp_dequeue_script( 'wc-password-strength-meter' );
@@ -130,4 +87,7 @@ function check_username($pmpro_continue_registration){
   return $pmpro_continue_registration;  
 }
 
+//EMP Dev Woocommerce
+require_once( get_stylesheet_directory() . '/emp-dev-wc/emp-dev-theme-functions.php' );
+require_once( get_stylesheet_directory() . '/emp-dev-wc/class-emp-dev-wc-meta-option.php' );
 

@@ -131,6 +131,7 @@ if ( class_exists( 'WJECF_Wrap' ) ) {
 function etheme_top_links($args = array()) {
 
 	$links = etheme_get_links($args);
+
 	if( ! empty($links)) :
 		?>
 
@@ -155,6 +156,7 @@ function etheme_top_links($args = array()) {
 }
 
 function etheme_get_links($args) {
+
 	extract(shortcode_atts(array(
 		'short'  => false,
 		'popups'  => true,

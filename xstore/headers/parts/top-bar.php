@@ -8,6 +8,14 @@
                     <?php if((!function_exists('dynamic_sidebar') || !dynamic_sidebar('languages-sidebar'))): ?>
                     <?php endif; ?>
 
+                    <span class="switch-country">
+                        <select class="selectpicker select-country">
+                            <option data-content="<img src='/wp-content/uploads/2018/09/AU_Flag.png' alt='AU' /> <span class='sel-desc'>AU</span>">AU</option>
+                            <option data-content="<img src='/wp-content/uploads/2018/09/NZ_Flag.png' alt='NZ'/> <span class='sel-desc'>NZ</span>">NZ</option>
+                            <option data-content="<img src='/wp-content/uploads/2018/09/USA_Flag.png' alt='USA'/> <span class='sel-desc'>USA</span>">USA</option>
+                        </select>
+                    </span>
+
                 </div>
 				<?php if ( is_active_sidebar('top-panel') && etheme_get_option('top_panel') ): ?>
                     <div class="top-panel-open"><span><?php esc_html_e('Open panel', 'xstore'); ?></span></div>

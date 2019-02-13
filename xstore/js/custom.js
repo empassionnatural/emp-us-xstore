@@ -2,8 +2,8 @@ var pattern = new RegExp('\\b[p]*(ost)*\\.*\\s*[o|0]*(ffice)*\\.*\\s*b[o|0]x\\b'
 jQuery(function($){
 	var isPOB = false,
 		shipping_postcode = false,
-		shipping_city = false,
 		shipping_address_1 = false,
+        shipping_city = false,
 		shipping_address_2 = false,
 		billing_address_1 = false,
 		billing_postcode = false,

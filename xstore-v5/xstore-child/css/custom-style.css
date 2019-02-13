@@ -194,9 +194,8 @@ button.btn-disabled,
   color: #8cc63f !important;
 }
 .link-signup:hover {
-  background-color: white;
-  color: #8fc118 !important;
-  border: 1px solid #8fc118;
+    background-color: #8fc118;
+    color: white !important;
 }
 .header-logo img {
   max-width: 180px;

@@ -76,7 +76,7 @@
     </style>
     <script>
         jQuery(document).ready(function($){
-            $('#place_order').live('click', function(e){
+            $('#place_order_disabled').live('click', function(e){
                 $('.shipping-error').remove();
                 $('.shipping').removeClass('error-tr');
                 var checked_shipping = $('.shipping_method:checked').length;

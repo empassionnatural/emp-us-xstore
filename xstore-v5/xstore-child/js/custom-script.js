@@ -30,10 +30,10 @@ jQuery(document).ready(function($){
             $(ele).prepend(loader);
         },
         selectCountry: function(){
-            $('.select-country').val('NZ');
-            $('.select-country').find('button img').attr('src', '/wp-content/uploads/2018/09/NZ_Flag-2.png');
-            $('.select-country').find('button .sel-desc').text('NZ');
-            $('.select-country').find('button').attr('title', 'NZ');
+            $('.select-country').val('USA');
+            $('.select-country').find('button img').attr('src', '/wp-content/uploads/2018/09/USA.png');
+            $('.select-country').find('button .sel-desc').text('USA');
+            $('.select-country').find('button').attr('title', 'USA');
 
             $('.select-country').change(function(){
                 var country_val = $(this).val();
@@ -45,8 +45,8 @@ jQuery(document).ready(function($){
                     case 'AU':
                         location.href = 'https://empassion.com.au';
                         break;
-                    case 'USA':
-                        location.href = 'https://empassionnatural.com';
+                    case 'NZ':
+                        location.href = 'https://empassion.co.nz';
                         break;
                     default:
                         break;

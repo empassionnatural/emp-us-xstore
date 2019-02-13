@@ -15,6 +15,14 @@
   background-color: #cbcbcb;
 }
 /*top-bar highlights*/
+.top-bar .account-dropdown.flex {
+  display: inline-flex;
+  width: auto;
+  float: right;
+}
+.top-bar .link-signup {
+  margin-right: 0px !important;
+}
 .languages-area .topbar-widget {
   width: 100%;
 }
@@ -182,12 +190,13 @@ button.btn-disabled,
   font-size: 15px;
   font-weight: bold;
 }
-.link-login:hover {
+.link-login:hover span {
   color: #8cc63f !important;
 }
 .link-signup:hover {
-  background-color: #8fc118;
-  color: white !important;
+  background-color: white;
+  color: #8fc118 !important;
+  border: 1px solid #8fc118;
 }
 .header-logo img {
   max-width: 180px;

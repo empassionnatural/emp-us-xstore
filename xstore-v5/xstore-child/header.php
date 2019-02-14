@@ -36,7 +36,22 @@
         }
 
         /*Header*/
+        @media (max-width: 1024px){
+            .menu-wrapper > .menu-main-container .menu > li > a{
+                font-size: 13px;
+            }
+            .header-xstore .top-bar, .top-bar .languages-area{
+                display:block;
+            }
+
+        }
+        @media (max-width: 992px){
+
+        }
         @media (max-width: 768px){
+            .dropdown-toggle span.sel-desc {
+                display: none;
+            }
             .header-logo a{
                 position: relative;
                 top: 8px;
@@ -44,7 +59,29 @@
             .header-search.act-default{
                 width: 100%
             }
+            .switch-country .btn.btn-default{
+                height: 40px;
+                max-width: 88px;
+            }
         }
+        @media (max-width: 736px){
+            .top-bar .cols.col-sm-4, .top-bar .cols.col-sm-8{
+                width: 50% !important;
+            }
+            .switch-country{
+                display: none !important;
+            }
+            .link-login{
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 340px){
+            .link-login,.contact-us .phone{
+                font-size: 11px;
+            }
+        }
+
 
 
         /*Fixed bugs woocommerce*/

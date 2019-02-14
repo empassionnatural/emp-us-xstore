@@ -35,6 +35,18 @@
             border: none;
         }
 
+        /*Header*/
+        @media (max-width: 768px){
+            .header-logo a{
+                position: relative;
+                top: 8px;
+            }
+            .header-search.act-default{
+                width: 100%
+            }
+        }
+
+
         /*Fixed bugs woocommerce*/
         .shopping-container .cart-bag .badge-number{
             background-color: #000;

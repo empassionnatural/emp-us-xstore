@@ -14,6 +14,36 @@
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #cbcbcb;
 }
+/*Loader*/
+.show-quickly .loader-circular{
+  width: 70px;
+}
+.show-quickly .loader-circular{
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+}
+/*Giftwrap*/
+.giftwrapper #gemagiftfront{
+  width: 100%;
+  max-width: 423px;
+  border: 3px dashed #c7c7c7;
+  background: white;
+  margin: auto;
+  float: none;
+}
+.woocommerce-checkout .giftwrapper #gemagiftfront{
+  max-width: 100%;
+}
+.giftwrapper #gemagiftfront ul li{
+  display: inline-table;
+  float: none;
+}
+.giftwrapper #gemagiftfront form{
+  padding: 10px;
+  width: auto;
+  border: none;
+}
+
 /*top-bar highlights*/
 .top-bar .account-dropdown.flex {
   display: inline-flex;
@@ -689,6 +719,44 @@ checkout-button {
 .single-product-default .widget-title {
   text-align: center;
 }
+/*Fixed bugs woocommerce*/
+.shopping-container .cart-bag .badge-number{
+  background-color: #000;
+}
+.woocommerce-info b, .cart-popup .woocommerce-Price-amount{
+  color: #333;
+}
+.error-tr{
+  outline: 1px solid #b63231;
+}
+.quantity.buttons_added span:hover, table.cart .remove-item:hover,
+input[type=submit]:hover, .btn:hover, .back-top:hover, .button:hover,
+.swiper-entry .swiper-custom-left:hover, .swiper-entry .swiper-custom-right:hover {
+  background-color: #dadada;
+}
+.header-search.act-default [role=searchform] .btn:hover{
+  background-color: #4a4a4a !important;
+}
+table.cart .product-details a:hover, .cart-widget-products .remove:hover, .cart-widget-products a:hover, .shipping-calculator-button, .tabs .tab-title:hover, .next-post .post-info .post-title, .prev-post .post-info .post-title, .form-submit input[type=submit]{
+  color: #000 !important;
+}
+.form-submit input[type=submit]:hover{
+  color: white !important;
+}
+.shipping-calculator-button:hover{
+  text-decoration: underline;
+}
+.active.et-opened .tab-title.opened{
+  border: 1px solid #e6e6e6;
+}
+.posts-nav-btn:hover .button:before{
+  color: #cbcbcb;
+}
+#wc-stripe-payment-request-wrapper, #wc-stripe-payment-request-button-separator{
+  display: none !important;
+}
+::-moz-selection { background: #d2c5ff !important; }
+::selection { background: #d2c5ff !important; }
 /*Responsive*/
 @media (min-width: 1024px) {
   #custom_html-2 .rf-reviews {
@@ -697,6 +765,13 @@ checkout-button {
     max-height: 495px;
     width: 93%;
   }
+  .menu-wrapper > .menu-main-container .menu > li > a{
+    font-size: 13px;
+  }
+  .header-xstore .top-bar, .top-bar .languages-area{
+    display:block;
+  }
+
 }
 @media (max-width: 1100px) {
   .contact-container .vc_icon_element-icon {
@@ -819,6 +894,20 @@ checkout-button {
   .prod-highlight-col > .vc_column-inner > .wpb_wrapper {
     min-height: 314px;
   }
+  .dropdown-toggle span.sel-desc {
+    display: none;
+  }
+  .header-logo a{
+    position: relative;
+    top: 8px;
+  }
+  .header-search.act-default{
+    width: 100%
+  }
+  .switch-country .btn.btn-default{
+    height: 40px;
+    max-width: 88px;
+  }
 }
 @media (max-width: 767px) {
   .top-bar-info .col-sm-4,
@@ -867,6 +956,18 @@ checkout-button {
     display: none;
   }
 }
+@media (max-width: 736px){
+  .top-bar .cols.col-sm-4, .top-bar .cols.col-sm-8{
+    width: 50% !important;
+  }
+  .switch-country{
+    display: none !important;
+  }
+  .link-login{
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 480px) {
   .top-bar-info .col-sm-4 {
     width: 0;
@@ -977,5 +1078,10 @@ checkout-button {
   }
   .switch-state {
     margin-left: 0;
+  }
+}
+@media (max-width: 340px){
+  .link-login,.contact-us .phone{
+    font-size: 11px;
   }
 }

@@ -1,4 +1,10 @@
 /*-------------------------product single page*/
+.tab-content .shop_attributes {
+    display: none;
+}
+.product-information .product_meta span {
+    margin-bottom: 0px !important;
+}
 .tabs .tab-content .tab-content-inner {
     max-height: 252px;
     padding-bottom: 10px;

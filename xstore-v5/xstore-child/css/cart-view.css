@@ -223,7 +223,7 @@ table.shop_table tbody tr.cart_item {
     .return-shop.button.alt {
         line-height: 2.8;
         padding: 0 !important;
-        height: 48px;
+        height: 45px;
     }
 }
 @media (max-width:992px) {

@@ -52,9 +52,9 @@ function empdev_custom_scripts_frontend(){
 
     wp_enqueue_style( 'register-view-style', get_stylesheet_directory_uri() . '/css/register-view.css', array(), '1.0.1' );
 
-    wp_enqueue_style( 'product-custom-style', get_stylesheet_directory_uri() . '/css/product-view.css' , array(), '1.2.1' );
+    wp_enqueue_style( 'product-custom-style', get_stylesheet_directory_uri() . '/css/product-view.css' , array(), '1.2.3' );
     wp_enqueue_style( 'single-product-custom-style', get_stylesheet_directory_uri() . '/css/single-product-view.css' , array(), '1.2.0' );
-	wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js/custom-script.js', array('jquery'), '1.7.1', false );
+	wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js/custom-script.js', array('jquery'), '1.7.2', false );
 
 	$schedule_on_sale = get_post_meta( $post_id, '_empdev_enable_sale_schedule', true );
 

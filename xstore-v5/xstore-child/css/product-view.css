@@ -512,6 +512,11 @@ i.icon::before {
     }
 }
 @media (max-width:1024px) {
+    .content-product .button {
+        height: 37px !important;
+        border: 2px solid black !important;
+        padding: 9px !important;
+    }
     .content-product span.show-quickly {
         display: none !important;
     }

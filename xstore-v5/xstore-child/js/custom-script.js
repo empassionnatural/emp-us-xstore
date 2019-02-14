@@ -112,7 +112,7 @@ var openAccordion = function(evt , id1 , id2) {
         x.className += " wp-show";
         x.style.maxHeight = x.scrollHeight  + "px";
         if(id2 == acctDet){
-            document.getElementById(id2).style.maxHeight = "1696px";
+            document.getElementById(id2).style.maxHeight = "1800px";
         }
     } else {
         y.className = y.className.replace(" active","")

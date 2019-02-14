@@ -27,8 +27,10 @@ global $product;
 	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
 
 		<span class="sku_wrapper"><?php esc_html_e( 'SKU:', 'xstore' ); ?> <span class="sku"><?php echo esc_html( ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'xstore' ) ); ?></span></span>
+        <span class="weight-wrapper"><?php esc_html_e( 'Weight:', 'xstore' ); ?> <span class="weight"> <?php echo esc_html( wc_format_weight( $product->get_weight() ) ); ?></span></span>
+        <span class="dimensions-wrapper"><?php esc_html_e( 'Dimension:', 'xstore' ); ?> <span class="dimensions"> <?php echo esc_html( wc_format_dimensions( $product->get_dimensions( false ) ) ); ?></span></span>
 
-	<?php endif; ?>
+    <?php endif; ?>
 
 	<?php do_action( 'woocommerce_product_meta_end' ); ?>
 

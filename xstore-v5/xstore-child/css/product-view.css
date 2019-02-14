@@ -105,6 +105,9 @@ div.product-image-wrapper .stock.out-of-stock {
     font-size: 21px;
     color: #888888 !important;
 }
+.quick-view-layout-default .main-images {
+    height: 100% !important;
+}
 .single-product-default .product-content .price span.woocommerce-Price-amount.amount, .quick-view-info .price span.woocommerce-Price-amount.amount {
     font-size: 24px;
     color: #333;

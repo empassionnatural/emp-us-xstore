@@ -6,7 +6,6 @@
 	<?php wp_head(); ?>
     <style>
 
-
     </style>
     <script>
         jQuery(document).ready(function($){

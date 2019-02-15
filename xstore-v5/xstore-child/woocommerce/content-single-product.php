@@ -101,7 +101,7 @@ $etheme_global['class'] .= ' single-product';
                         <div class="col-lg-4 col-sm-4">
                             <i class="icon vc_icon_element-icon fa fa-truck"></i>
                             <p class="title">Fast Shipping</p>
-                            <p class="sub-title">1 - 3 business days</p>
+                            <p class="sub-title"></p>
                         </div>
                         <div class="col-lg-4 col-sm-4">
                             <i class="icon vc_icon_element-icon fa fa-shield"></i>

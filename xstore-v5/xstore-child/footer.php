@@ -75,6 +75,10 @@ $disable_copyrights = etheme_get_custom_field('remove_copyrights', $page_id);
 
 </div> <!-- template-content -->
 
+<div id="cart-id" class="cart backIn">
+    <?php etheme_top_cart(); ?>
+</div>
+
 <?php do_action('after_page_wrapper'); ?>
 </div> <!-- template-container -->
 

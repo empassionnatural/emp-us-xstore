@@ -565,6 +565,9 @@ i.icon::before {
     .row-count-2 .product:nth-child(2n+1), .row-count-3 .product:nth-child(2n+1), .row-count-4 .product:nth-child(2n+1), .row-count-5 .product:nth-child(2n+1) {
         clear: none !important;
     }
+    .sidebar-mobile-top .sidebar.sidebar-left {
+        display: none;
+    }
 }
 @media (max-width:768px) {
     .products-loop.products-grid .wishlist-disabled.status-publish , .product-slide  {
@@ -638,6 +641,7 @@ i.icon::before {
     .product-information .rating-link {
         max-width: 249px !important;
     }
+
 }
 @media (max-width: 375px) {
     .products-loop.products-grid .wishlist-disabled.status-publish , .product-slide  {

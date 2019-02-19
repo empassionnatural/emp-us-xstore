@@ -1076,8 +1076,9 @@ checkout-button {
     }
 }
 
-
-
+back-top {
+  bottom: 60px !important;
+}
 /*Fixed bugs woocommerce*/
 .shopping-container .cart-bag .badge-number{
     background-color: #000;

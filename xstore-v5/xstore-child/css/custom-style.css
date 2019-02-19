@@ -1013,6 +1013,9 @@ checkout-button {
     width: auto;
     border: none;
 }
+back-top {
+  bottom: 60px !important;
+}
 /*Floating Button*/
 #id-floatingbutton {
   display: none;
@@ -1074,10 +1077,6 @@ checkout-button {
     .link-login,.contact-us .phone{
         font-size: 11px;
     }
-}
-
-back-top {
-  bottom: 60px !important;
 }
 /*Fixed bugs woocommerce*/
 .shopping-container .cart-bag .badge-number{

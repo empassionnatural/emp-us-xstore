@@ -1013,6 +1013,10 @@ checkout-button {
     width: auto;
     border: none;
 }
+/*Floating Button*/
+#id-floatingbutton {
+  display: none;
+}
 
 /*Header*/
 @media (max-width: 1024px){
@@ -1054,7 +1058,18 @@ checkout-button {
         margin-right: 0;
     }
 }
-
+@media (max-width: 480px) {
+  #id-floatingbutton.fbIn {
+    display: block !important;
+  }
+  #id-floatingbutton.fbOut {
+    display: none !important;
+  }
+  .back-top {
+    bottom: 165px !important;
+    right: 21px !important;
+  }
+}
 @media (max-width: 340px){
     .link-login,.contact-us .phone{
         font-size: 11px;
@@ -1101,11 +1116,6 @@ table.cart .product-details a:hover, .cart-widget-products .remove:hover, .cart-
 }
 ::-moz-selection { background: #d2c5ff !important; }
 ::selection { background: #d2c5ff !important; }
-
-.back-top {
-  bottom: 165px !important;
-  right: 21px !important;
-}
 
 div#id-floatingbutton {
   opacity: 1;

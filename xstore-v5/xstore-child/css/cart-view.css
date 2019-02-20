@@ -227,6 +227,9 @@ table.shop_table tbody tr.cart_item {
     }
 }
 @media (max-width:992px) {
+    .woocommerce-cart-form__contents.cart .stock.in-stock {
+        width: 35% !important;
+    }
     .woocommerce-cart .template-content .content-page .woocommerce .woocommerce .add-coupon-code {
         padding-right: 15px !important;
         padding-left: 15px !important;
@@ -258,9 +261,6 @@ table.shop_table tbody tr.cart_item {
     }
 }
 @media (max-width:480px) {
-    .woocommerce-cart-form__contents.cart .stock.in-stock {
-        width: 35% !important;
-    }
     .remove-item-mobile {
         top: 30px !important;
     }
